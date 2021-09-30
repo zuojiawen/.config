@@ -90,9 +90,13 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'preservim/nerdtree'
+  Plug 'ryanoasis/vim-devicons'
   Plug 'easymotion/vim-easymotion'
   Plug 'neoclide/coc.nvim',{'branch':'release'}
   Plug 'jiangmiao/auto-pairs'
+  Plug 'preservim/vimux'
+  Plug 'kyazdani42/nvim-tree.lua'
+  Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 
