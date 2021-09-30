@@ -1,0 +1,18 @@
+# ignore everything 
+/*
+/*/
+
+
+# ... but these: 
+!/README.md
+!/.gitignore
+
+!nvim
+nvim/plugged/
+nvim/.netrwhist
+
+!ranger
+ranger/plugins/
+
+!zsh
+zsh/*.zwc
