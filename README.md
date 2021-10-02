@@ -13,7 +13,7 @@ This repo is my config file. You can clone it to your home directory, then you c
 ## zsh
 1. You need to run the following command: 
 ```
-rm ~/.zshrc'
+rm ~/.zshrc
 ln -s ~/.config/zsh/.zshrc ~/.zshrc 
 ```
 2. You need to install the plugin manager [zinit](https://github.com/zdharma/zinit), 

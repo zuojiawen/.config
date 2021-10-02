@@ -101,6 +101,8 @@ call plug#end()
 
 
 source ~/.config/nvim/coc.vim
+source ~/.config/nvim/nvimtree.vim
+
 
 
 " ===
