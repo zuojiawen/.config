@@ -29,7 +29,7 @@ ln -s ~/.config/zsh/.zshrc ~/.zshrc
 
 RUN following script to config proxy in your WSL2. 
 ```
-echo "Plelase enter the port: "
+echo -n "Plelase enter the port: "
 read port
 host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
 export ALL_PROXY="http://$host_ip:$port" 
