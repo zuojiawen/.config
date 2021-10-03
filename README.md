@@ -20,6 +20,11 @@ ln -s ~/.config/zsh/.zshrc ~/.zshrc
    You can install brew in 清华源 or Gitee to install zinit. 
 3. For plugin powerlevel10k, you can type command "p10k configure" to config Powerlevel10k theme. 
 
+## tmux
+1. To config the tmux, you should run the following command: 
+`ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf`
+2. First, you should to install tmux plugin manager [tpm](https://github.com/tmux-plugins/tpm), and then hit `<prefix> + I`. Note that the I is capital.  
+
 # PROXY
 
 RUN following script to config proxy in your WSL2. 

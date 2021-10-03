@@ -20,9 +20,10 @@ inoremap jk <Esc>
 noremap L $
 noremap H 0
 noremap erc :e $MYVIMRC<CR>
+noremap src :w<CR>:source $MYVIMRC<CR>
 
 " Run a script 
-noremap rs :w<CR>:! python3 % <CR>
+noremap <LEADER>s :w<CR>:! python3 % <CR>
 
 
 
@@ -97,12 +98,23 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'preservim/vimux'
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'francoiscabrol/ranger.vim'
+  Plug 'rbgrouleff/bclose.vim'
+
 call plug#end()
 
 
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/nvimtree.vim
 
+let g:ranger_map_keys = 0
+"map ra :Ranger<CR>
+
+"====
+"====airline====
+"====
+let g:airline_theme='dark_minimal'
+let g:airline#extensions#tabline#enabled = 1
 
 
 " ===
