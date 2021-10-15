@@ -15,6 +15,7 @@ ln -s ~/.config/zsh/.zshrc ~/.zshrc
 ## nvim
 1. Need to install [vim-plug plugin manager](https://github.com/junegunn/vim-plug) and run `:PlugInstall`. 
 2. The coc.nvim plugin need nodejs sprcified version. Recommended to install via [brew package manager](https://brew.sh/) if the linux system you are using is based on Debian. 
+3. The coc plugin need dowmload via npm, you'd better swich the npm source to domestoc source.
 
 ## ranger
 1. If you want to have icons in front of the filename, You need to install ranger plugin devicon2 in [ranger wiki page](https://github.com/ranger/ranger/wiki) or directly in [devicon2 page](https://github.com/cdump/ranger-devicons2)
