@@ -108,7 +108,7 @@ source ~/.config/nvim/coc.vim
 source ~/.config/nvim/nvimtree.vim
 
 let g:ranger_map_keys = 0
-"map ra :Ranger<CR>
+map <LEADER>f :Ranger<CR>
 
 "====
 "====airline====
