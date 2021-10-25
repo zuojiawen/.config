@@ -13,6 +13,7 @@ zinit light zsh-users/zsh-autosuggestions
 # Load powerlevel10k theme
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 #zinit light iplaces/astro-zsh-theme
+#zinit light iplaces/astro-zsh-theme
 
 
 zinit light changyuheng/zsh-interactive-cd 

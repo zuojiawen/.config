@@ -2,13 +2,6 @@
 " vim-plug.
 " The plugin coc.nvim need nodejs specifed version
 
-" Make the windows become more clear and beautiful. 
-set number
-set cursorline
-set wrap
-" set background=dark
-" Always display a status line (it gets hidden sometimes otherwise).
-" set laststatus=2
 
 " To make nvim more easy to use
 " Edit key maping
@@ -82,6 +75,14 @@ set autochdir
 let loaded_matchparen=1
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" Make the windows become more clear and beautiful. 
+set number
+set cursorline
+set wrap
+" set background=dark
+" Always display a status line (it gets hidden sometimes otherwise).
+" set laststatus=2
+
 
 
 
@@ -102,7 +103,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'francoiscabrol/ranger.vim'
   Plug 'rbgrouleff/bclose.vim'
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-
 call plug#end()
 
 
@@ -128,7 +128,7 @@ map tt :NERDTreeToggle<CR>
 
 
 
-"===
+" ===
 " ===vim-colorschemes plug
 " ===
 colorscheme smyck                     "colorsheme can browsed by command SCORLL
