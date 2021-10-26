@@ -7,6 +7,8 @@ zinit load zdharma/history-search-multi-word
 # Two regular plugins loaded without investigating.
 # zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
+zinit light sineto/web-search
+
 
 
 
@@ -16,10 +18,10 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 #zinit light iplaces/astro-zsh-theme
 
 
-zinit light changyuheng/zsh-interactive-cd 
+#zinit light changyuheng/zsh-interactive-cd 
 
 
-zinit ice depth=1
+#zinit ice depth=1
 #zinit light jeffreytse/zsh-vi-mode
 
 zinit light hcgraf/zsh-sudo
