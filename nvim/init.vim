@@ -41,10 +41,9 @@ map th :-tabnext<CR>
 map tl :+tabnext<CR>
 
 
-
 "Search setting
 set ignorecase
-set smartcase
+"set smartcase
 set hlsearch
 set incsearch
 noremap - Nzz
@@ -66,8 +65,11 @@ filetype indent on
 filetype plugin on
 filetype plugin indent on
 set mouse=a
-set clipboard=unnamed
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4 
 set foldmethod=indent
+set foldlevelstart=99
 set laststatus=2
 set scrolloff=5
 " set hidden 
@@ -84,6 +86,56 @@ set wrap
 " set laststatus=2
 
 
+" Compile function
+noremap <C-r> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+	exec "w"
+	if &filetype == 'c'
+		exec "!g++ % -o %<"
+		exec "!time ./%<"
+	elseif &filetype == 'cpp'
+		set splitbelow
+		exec "!g++ -std=c++11 % -Wall -o %<"
+		:sp
+		:res -15
+		:term ./%<
+	elseif &filetype == 'cs'
+		set splitbelow
+		silent! exec "!mcs %"
+		:sp
+		:res -5
+		:term mono %<.exe
+	elseif &filetype == 'java'
+		set splitbelow
+		:sp
+		:res -5
+		term javac % && time java %<
+	elseif &filetype == 'sh'
+		:!time bash %
+	elseif &filetype == 'python'
+		set splitbelow
+		:sp
+		:term python3 %
+	elseif &filetype == 'html'
+		silent! exec "!".g:mkdp_browser." % &"
+	elseif &filetype == 'markdown'
+		exec "MarkdownPreview"
+	elseif &filetype == 'tex'
+		silent! exec "VimtexStop"
+		silent! exec "VimtexCompile"
+	elseif &filetype == 'dart'
+		exec "CocCommand flutter.run -d ".g:flutter_default_device." ".g:flutter_run_args
+		silent! exec "CocCommand flutter.dev.openDevLog"
+	elseif &filetype == 'javascript'
+		set splitbelow
+		:sp
+		:term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
+	elseif &filetype == 'go'
+		set splitbelow
+		:sp
+		:term go run .
+	endif
+endfunc
 
 
 call plug#begin('~/.config/nvim/plugged')
@@ -103,6 +155,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'francoiscabrol/ranger.vim'
   Plug 'rbgrouleff/bclose.vim'
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+  Plug 'preservim/nerdcommenter'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 
@@ -133,3 +189,4 @@ map tt :NERDTreeToggle<CR>
 " ===
 colorscheme smyck                     "colorsheme can browsed by command SCORLL
 syntax off
+
