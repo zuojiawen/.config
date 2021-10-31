@@ -2,6 +2,7 @@
 " vim-plug.
 " The plugin coc.nvim need nodejs specifed version
 
+lua require 'init'
 
 " To make nvim more easy to use
 " Edit key maping
@@ -74,7 +75,8 @@ set laststatus=2
 set scrolloff=5
 " set hidden 
 set autochdir
-let loaded_matchparen=1
+" Load match bracket
+"let loaded_matchparen=1
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Make the windows become more clear and beautiful. 
@@ -158,13 +160,16 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'preservim/nerdcommenter'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'luochen1990/rainbow'
 call plug#end()
 
 
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/nvimtree.vim
 
+
+let g:rainbow_active = 1
 let g:ranger_map_keys = 0
 map <LEADER>f :Ranger<CR>
 
