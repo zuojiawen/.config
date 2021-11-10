@@ -193,5 +193,5 @@ map tt :NERDTreeToggle<CR>
 " ===vim-colorschemes plug
 " ===
 colorscheme smyck                     "colorsheme can browsed by command SCORLL
-syntax off
+syntax on
 

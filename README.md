@@ -8,7 +8,7 @@ This repo is my config file. You can clone it to your home directory, then you c
 rm ~/.zshrc
 ln -s ~/.config/zsh/.zshrc ~/.zshrc 
 ```
-2. You need to install [the plugin manager zinit](https://github.com/zdharma/zinit), 
+2. You need to install [the plugin manager zinit](https://github.com/z-shell/zinit), 
    You can install brew in 清华源 or Gitee to install zinit. 
 3. For plugin powerlevel10k, you can type command "p10k configure" to config Powerlevel10k theme. 
 
