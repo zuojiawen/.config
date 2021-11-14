@@ -4,7 +4,7 @@ nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
+"let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
 
 highlight NvimTreeFolderName guifg=blue gui=bold,underline
 highlight NvimTreeRootFolder guifg=blue gui=bold,underline
