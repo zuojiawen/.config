@@ -7,7 +7,7 @@ fi
 
 source ~/.config/zsh/alias.zsh
 source ~/.config/zsh/env.zsh
-source ~/.config/zsh/zinit.zsh
+# source ~/.config/zsh/zinit.zsh
 # source ~/.config/zsh/vi.zsh
 source ~/.config/zsh/completions.zsh
 source ~/.config/zsh/manjaro-zsh-config
