@@ -12,9 +12,6 @@ alias ra='ranger'
 alias vim='nvim'
 alias lgit='lazygit'
 
-# proxy
-alias proxy='source ~/.config/zsh/proxy.sh'
-alias unproxy='unset ALL_PROXY'
 
 # shell built-in command
 alias l='ls -la'
