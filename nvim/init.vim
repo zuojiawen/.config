@@ -162,6 +162,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'neovim/nvim-lspconfig'
   Plug 'luochen1990/rainbow'
+  Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enbale-bash'}
 call plug#end()
 
 
