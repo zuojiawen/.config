@@ -7,13 +7,23 @@ fi
 
 source ~/.config/zsh/alias.zsh
 source ~/.config/zsh/env.zsh
-source ~/.config/zsh/zinit.zsh
+# source ~/.config/zsh/zinit.zsh
 # source ~/.config/zsh/vi.zsh
 source ~/.config/zsh/completions.zsh
 source ~/.config/zsh/manjaro-zsh-config
+source ~/.config/zsh/command.zsh 
+
+
+
+# plugin 
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
