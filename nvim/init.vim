@@ -2,7 +2,6 @@
 " vim-plug.
 " The plugin coc.nvim need nodejs specifed version
 
-lua require 'init'
 
 " To make nvim more easy to use
 " Edit key maping
@@ -17,7 +16,7 @@ noremap erc :e $MYVIMRC<CR>
 noremap src :w<CR>:source $MYVIMRC<CR>
 
 " Run a script 
-noremap <LEADER>s :w<CR>:! python3 % <CR>
+noremap <LEADER>r :w<CR>:! python3 % <CR>
 
 
 
@@ -163,11 +162,14 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'neovim/nvim-lspconfig'
   Plug 'luochen1990/rainbow'
   Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enbale-bash'}
+  Plug 'mfussenegger/nvim-dap'
 call plug#end()
 
 
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/nvimtree.vim
+source ~/.config/nvim/vimspector.vim 
+source ~/.config/nvim/func.vim
 
 
 let g:rainbow_active = 1
@@ -196,3 +198,10 @@ map tt :NERDTreeToggle<CR>
 colorscheme smyck                     "colorsheme can browsed by command SCORLL
 syntax on
 
+
+
+
+
+
+
+lua require 'init'
