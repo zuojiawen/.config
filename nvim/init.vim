@@ -142,10 +142,10 @@ endfunc
 call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-scripts/ScrollColors'
   Plug 'flazz/vim-colorschemes'
-  Plug 'connorholyday/vim-snazzy'
+  "Plug 'connorholyday/vim-snazzy'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'preservim/nerdtree'
+  "Plug 'preservim/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   Plug 'easymotion/vim-easymotion'
   Plug 'neoclide/coc.nvim',{'branch':'release'}
@@ -161,8 +161,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'neovim/nvim-lspconfig'
   Plug 'luochen1990/rainbow'
-  Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enbale-bash'}
+  Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python'}
   Plug 'mfussenegger/nvim-dap'
+  Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 
@@ -170,6 +171,7 @@ source ~/.config/nvim/coc.vim
 source ~/.config/nvim/nvimtree.vim
 source ~/.config/nvim/vimspector.vim 
 source ~/.config/nvim/func.vim
+source ~/.config/nvim/dracula.vim
 
 
 let g:rainbow_active = 1
@@ -195,7 +197,8 @@ map tt :NERDTreeToggle<CR>
 " ===
 " ===vim-colorschemes plug
 " ===
-colorscheme smyck                     "colorsheme can browsed by command SCORLL
+"colorscheme dracula                    
+" colorsheme can browsed by command SCORLL
 syntax on
 
 
