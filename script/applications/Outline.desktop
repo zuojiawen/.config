@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Outline 
+Exec=/home/zuowen/Outline/Outline-Client.AppImage %f
+Icon=/home/zuowen/.config/script/icons/Outline.png
+Terminal=false
+StartupNotify=true
+

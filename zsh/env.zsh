@@ -6,3 +6,5 @@ export EDITOR=nvim
 export FZF_DEFAULT_COMMAND='fd --hidden -E AppData -E .git'
 #export FZF_COMPLETION_TRIGGER='\'
 
+export WINEARCH=win32  
+

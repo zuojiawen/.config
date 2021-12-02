@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Clash 
+Exec=/home/zuowen/clash/cfw %f
+Icon=/home/zuowen/.config/script/icons/Clash.png
+Terminal=false
+StartupNotify=true
+

@@ -150,7 +150,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'easymotion/vim-easymotion'
   Plug 'neoclide/coc.nvim',{'branch':'release'}
   Plug 'jiangmiao/auto-pairs'
-  Plug 'preservim/vimux'
+  "Plug 'preservim/vimux'
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'francoiscabrol/ranger.vim'
