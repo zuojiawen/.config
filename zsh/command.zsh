@@ -1,8 +1,10 @@
 #!bin/bash
 
 proxy(){
-	export http_proxy="http://127.0.0.1:7890"
-	export https_proxy="https://127.0.0.1:7890"
+	echo -n "Plelase enter the port: "
+	read port
+	export http_proxy="http://127.0.0.1:$part"
+	export https_proxy="https://127.0.0.1:$port"
     echo "Proxy on"
 }
 
