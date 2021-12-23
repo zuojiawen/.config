@@ -5,10 +5,16 @@ function! JumpPair()
 	let cpos=col(".")-1
 	while endl-cpos>=0 
 		let c=buf[cpos]
-		if c is ')' 
+		if c is ')'  
+			let pairpos=cpos+1 
+			break  
+		elseif c is ']'  
 			let pairpos=cpos+1 
 			break  
 		elseif c is '"'
+			let pairpos=cpos+1 
+			break   
+		elseif c is "'"
 			let pairpos=cpos+1 
 			break   
 		endif
