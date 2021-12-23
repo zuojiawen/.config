@@ -12,6 +12,7 @@ noremap K 5k
 inoremap jk <Esc>
 noremap L $
 noremap H 0
+noremap <C-c> "+y
 noremap erc :e $MYVIMRC<CR>
 noremap src :w<CR>:source $MYVIMRC<CR>
 
