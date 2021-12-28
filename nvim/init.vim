@@ -10,6 +10,7 @@ noremap ; :
 noremap J 5j
 noremap K 5k
 inoremap jk <Esc>
+noremap <C-q> :q<CR>
 noremap L $
 noremap H 0
 noremap <C-c> "+y

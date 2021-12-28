@@ -52,6 +52,7 @@ return require('packer').startup(function()
 	"rafamadriz/friendly-snippets" --代码段合集
 	}
 	}
+	use 'kabouzeid/nvim-lspinstall'
 
 
 
