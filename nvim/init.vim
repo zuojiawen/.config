@@ -149,7 +149,7 @@ call plug#begin('~/.config/nvim/plugged')
   "Plug 'preservim/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   Plug 'easymotion/vim-easymotion'
-  Plug 'neoclide/coc.nvim',{'branch':'release'}
+  "Plug 'neoclide/coc.nvim',{'branch':'release'}
   Plug 'jiangmiao/auto-pairs'
   "Plug 'preservim/vimux'
   Plug 'kyazdani42/nvim-tree.lua'
@@ -160,7 +160,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'preservim/nerdcommenter'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-  Plug 'neovim/nvim-lspconfig'
+  "Plug 'neovim/nvim-lspconfig'
   Plug 'luochen1990/rainbow'
   Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python'}
   Plug 'mfussenegger/nvim-dap'
@@ -168,16 +168,18 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 
-source ~/.config/nvim/coc.vim
+"source ~/.config/nvim/coc.vim
 source ~/.config/nvim/nvimtree.vim
 source ~/.config/nvim/vimspector.vim 
 source ~/.config/nvim/func.vim
-source ~/.config/nvim/dracula.vim
+"source ~/.config/nvim/dracula.vim
 
 
 let g:rainbow_active = 1
 let g:ranger_map_keys = 0
-map <LEADER>f :Ranger<CR>
+map <C-f> :Ranger<CR>
+
+map <LEADER>f :FZF<CR>
 
 "====
 "====airline====
@@ -198,7 +200,7 @@ map tt :NERDTreeToggle<CR>
 " ===
 " ===vim-colorschemes plug
 " ===
-"colorscheme dracula                    
+colorscheme gruvbox                     
 " colorsheme can browsed by command SCORLL
 syntax on
 
