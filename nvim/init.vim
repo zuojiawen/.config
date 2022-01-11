@@ -18,7 +18,7 @@ noremap erc :e $MYVIMRC<CR>
 noremap src :w<CR>:source $MYVIMRC<CR>
 
 " Run a script 
-noremap <LEADER>r :w<CR>:! python3 % <CR>
+noremap <A-r> :w<CR>:! python3 % <CR>
 
 
 
@@ -118,6 +118,7 @@ func! CompileRunGcc()
 	elseif &filetype == 'python'
 		set splitbelow
 		:sp
+		:resize-8
 		:term python3 %
 	elseif &filetype == 'html'
 		silent! exec "!".g:mkdp_browser." % &"
