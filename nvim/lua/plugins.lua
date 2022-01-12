@@ -18,11 +18,13 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Plugins can have dependencies on other plugins
-  use {
-    'haorenW1025/completion-nvim',
-    opt = true,
-    requires = {{'hrsh7th/vim-vsnip', opt = true}, {'hrsh7th/vim-vsnip-integ', opt = true}}
-  }
+  --use {
+    --'haorenW1025/completion-nvim',
+    --opt = true,
+    --requires = {{'hrsh7th/vim-vsnip', opt = true}, {'hrsh7th/vim-vsnip-integ', opt = true}}
+  --}
+  
+
   -- lspconfig
   use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
 
@@ -53,7 +55,16 @@ return require('packer').startup(function()
 	}
 	}
 
+	use 'mfussenegger/nvim-dap'
+	--use {'rcarriga/nvim-dap-ui'}
+	--use 'nvim-telescope/telescope-dap.nvim' 
+	use 'mfussenegger/nvim-dap-python'
+	--use 'theHamsta/nvim-dap-virtual-text'
 
+	--use {
+	  --'nvim-telescope/telescope.nvim',
+	  --requires = { {'nvim-lua/plenary.nvim'} }
+	--}
 
 
 

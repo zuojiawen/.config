@@ -148,10 +148,8 @@ call plug#begin('~/.config/nvim/plugged')
   "Plug 'connorholyday/vim-snazzy'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  "Plug 'preservim/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   Plug 'easymotion/vim-easymotion'
-  "Plug 'neoclide/coc.nvim',{'branch':'release'}
   Plug 'jiangmiao/auto-pairs'
   "Plug 'preservim/vimux'
   Plug 'kyazdani42/nvim-tree.lua'
@@ -164,16 +162,12 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf.vim'
   "Plug 'neovim/nvim-lspconfig'
   Plug 'luochen1990/rainbow'
-  Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python'}
-  Plug 'mfussenegger/nvim-dap'
-  Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 
-"source ~/.config/nvim/coc.vim
 source ~/.config/nvim/nvimtree.vim
-source ~/.config/nvim/vimspector.vim 
 source ~/.config/nvim/func.vim
+source ~/.config/nvim/map.vim
 "source ~/.config/nvim/dracula.vim
 
 
@@ -188,14 +182,6 @@ map <LEADER>f :FZF<CR>
 "====
 let g:airline_theme='dark_minimal'
 let g:airline#extensions#tabline#enabled = 0
-
-
-" ===
-" ===nerdtree
-" ===
-map tt :NERDTreeToggle<CR>
-
-
 
 
 
