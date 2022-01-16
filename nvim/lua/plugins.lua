@@ -61,15 +61,20 @@ return require('packer').startup(function()
 	use 'mfussenegger/nvim-dap-python'
 	--use 'theHamsta/nvim-dap-virtual-text'
 
-	--use {
-	  --'nvim-telescope/telescope.nvim',
-	  --requires = { {'nvim-lua/plenary.nvim'} }
-	--}
+	use {
+	  'nvim-telescope/telescope.nvim',
+	  requires = { {'nvim-lua/plenary.nvim'} }
+	}
 
+	use {
+	  "folke/todo-comments.nvim",
+	  requires = "nvim-lua/plenary.nvim",
+	  config = function()
+		require("todo-comments").setup() 
+	  end
+	}
 
-
-
-
+	 
 
 
 
@@ -80,3 +85,7 @@ return require('packer').startup(function()
     require('packer').sync()
   end
 end)
+
+
+
+

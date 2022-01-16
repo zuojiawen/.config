@@ -15,5 +15,6 @@ alias lgit='lazygit'
 
 # shell built-in command
 alias l='ls -la'
+alias e='exit'
 
 
