@@ -1,3 +1,5 @@
+let mapleader = " "
+
 " Tab management
 map tn :tabe<CR>
 map th :-tabnext<CR>
@@ -67,7 +69,6 @@ inoremap jl <c-r>=JumpPair()<CR>
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 map <C-f> :Ranger<CR>
-map <LEADER>f :FZF<CR>
 
 
 

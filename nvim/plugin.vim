@@ -13,8 +13,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-scripts/ScrollColors'
   Plug 'flazz/vim-colorschemes'
   "Plug 'connorholyday/vim-snazzy'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
   Plug 'ryanoasis/vim-devicons'
   Plug 'easymotion/vim-easymotion'
   Plug 'jiangmiao/auto-pairs'
@@ -24,8 +22,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'francoiscabrol/ranger.vim'
   Plug 'rbgrouleff/bclose.vim'
   Plug 'preservim/nerdcommenter'
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
+  "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  "Plug 'junegunn/fzf.vim'
   "Plug 'neovim/nvim-lspconfig'
   Plug 'luochen1990/rainbow'
   " Markdown
@@ -35,34 +33,30 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer'), 'for': ['markdown'] }    "MarkdownPreview
   "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
   Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'scss'] }
-  
-  
-  
+
+  Plug 'chentau/marks.nvim'
+  Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' } 
+
+  "Plug 'vim-airline/vim-airline'
+  "Plug 'vim-airline/vim-airline-themes'
+
+  Plug 'rafi/vim-venom', { 'for': 'python' }
+
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'folke/todo-comments.nvim'
+
 call plug#end()
-
-
-
 
 
 " rainbow 
 let g:rainbow_active = 1
 let g:ranger_map_keys = 0
 
-"====
-"====airline====
-"====
-let g:airline_theme='dark_minimal'
-let g:airline#extensions#tabline#enabled = 1
-
 
 " ===
 " === nvim-dap
 " ===    
 au FileType dap-repl lua require('dap.ext.autocompl').attach()
-
-
-
-
 
 
 :lua require'nvim-tree'.setup()

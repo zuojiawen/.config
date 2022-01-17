@@ -8,13 +8,9 @@ require('snippets')
 
 require('dapconf')
 
+require('setup')
 
 
 
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true
-  },
-}
 
 

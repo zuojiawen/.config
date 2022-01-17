@@ -9,7 +9,6 @@ alias gc='git clone'
 
 # some package 
 alias ra='ranger'
-alias vim='nvim'
 alias lgit='lazygit'
 
 

@@ -14,16 +14,6 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  -- Post-install/update hook with neovim command
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-
-  -- Plugins can have dependencies on other plugins
-  --use {
-    --'haorenW1025/completion-nvim',
-    --opt = true,
-    --requires = {{'hrsh7th/vim-vsnip', opt = true}, {'hrsh7th/vim-vsnip-integ', opt = true}}
-  --}
-  
 
   -- lspconfig
   use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
@@ -56,7 +46,7 @@ return require('packer').startup(function()
 	}
 
 	use 'mfussenegger/nvim-dap'
-	--use {'rcarriga/nvim-dap-ui'}
+	use {'rcarriga/nvim-dap-ui'}
 	--use 'nvim-telescope/telescope-dap.nvim' 
 	use 'mfussenegger/nvim-dap-python'
 	--use 'theHamsta/nvim-dap-virtual-text'
@@ -74,7 +64,17 @@ return require('packer').startup(function()
 	  end
 	}
 
-	 
+	 use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+     }
+
+
+     use {
+         'nvim-treesitter/nvim-treesitter',
+         run = ':TSUpdate'
+     }
+
 
 
 

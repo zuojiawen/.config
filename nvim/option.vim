@@ -42,6 +42,6 @@ set wrap
 
 
 " vim-colorschemes 
-colorscheme gruvbox                     
+"colorscheme gruvbox                     
 " colorsheme can browsed by command SCORLL
-syntax on
+syntax off
