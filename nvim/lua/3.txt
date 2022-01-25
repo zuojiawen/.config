@@ -1,5 +1,0 @@
-INFO 
-TODO
-# WARNING
-FIX 
-

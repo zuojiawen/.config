@@ -25,7 +25,7 @@ call plug#begin('~/.config/nvim/plugged')
   "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   "Plug 'junegunn/fzf.vim'
   "Plug 'neovim/nvim-lspconfig'
-  Plug 'luochen1990/rainbow'
+  "Plug 'luochen1990/rainbow'
   " Markdown
   Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
   Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
@@ -34,7 +34,6 @@ call plug#begin('~/.config/nvim/plugged')
   "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
   Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'scss'] }
 
-  Plug 'chentau/marks.nvim'
   Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' } 
 
   "Plug 'vim-airline/vim-airline'

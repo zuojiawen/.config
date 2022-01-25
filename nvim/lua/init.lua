@@ -10,6 +10,7 @@ require('dapconf')
 
 require('setup')
 
+require('options')
 
 
 

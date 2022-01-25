@@ -29,7 +29,7 @@ set scrolloff=5
 " set hidden 
 set autochdir
 " Load match bracket
-"let loaded_matchparen=1
+" let loaded_matchparen=1
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Make the windows become more clear and beautiful. 
@@ -40,8 +40,7 @@ set wrap
 " Always display a status line (it gets hidden sometimes otherwise).
 " set laststatus=2
 
-
-" vim-colorschemes 
-"colorscheme gruvbox                     
 " colorsheme can browsed by command SCORLL
-syntax off
+syntax on
+
+

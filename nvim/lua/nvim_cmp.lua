@@ -3,31 +3,18 @@ if (not status) then
   return
 end
 
---local nvim_lsp = require('lspconfig')
---typescript支持
 require("lspconf")
---json支持
---require("lspconf.json")
---lua
---require("lspconf.lua")
---普通的语言支持
---require("lspconf.common")
 
--- Set completeopt to have a better completion experience
-vim.o.completeopt = "menuone,noselect"
+vim.o.completeopt = "menu,menuone,noselect"
 
--- luasnip setup
+
 local luasnip = require "luasnip"
 local lspkind = require("lspkind")
 
--- nvim-cmp setup
 local cmp = require "cmp"
 
--- 自动提示1 详情信息
 local cmpFormat1 = function(entry, vim_item)
-  -- fancy icons and a name of kind
   vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
-  -- set a name for each source
   vim_item.menu =
     ({
     buffer = "[Buffer]",
@@ -44,13 +31,11 @@ local cmpFormat1 = function(entry, vim_item)
   return vim_item
 end
 
--- 自动提示2 简洁信息
 local cmpFormat2 = function(entry, vim_item)
   vim_item.kind = lspkind.presets.default[vim_item.kind]
   return vim_item
 end
 
--- 自动提示3 详情信息
 local cmpFormat3 = function(entry, vim_item)
   -- fancy icons and a name of kind
   vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. ""
@@ -71,8 +56,6 @@ local cmpFormat3 = function(entry, vim_item)
   return vim_item
 end
 
-------修复2021年10月12日 nvim-cmp.luaattempt to index field 'menu' (a nil value)---------
---重写插件方法,为了实现function 后,自动追加()
 local keymap = require("cmp.utils.keymap")
 cmp.confirm = function(option)
   option = option or {}
@@ -86,7 +69,6 @@ cmp.confirm = function(option)
       function()
         local myContext = cmp.core:get_context({reason = cmp.ContextReason.TriggerOnly})
         cmp.core:complete(myContext)
-        --function() 自动增加()
         if
           e and e.resolved_completion_item and
             (e.resolved_completion_item.kind == 3 or e.resolved_completion_item.kind == 2)
@@ -104,7 +86,8 @@ cmp.confirm = function(option)
     return false
   end
 end
----------------
+
+
 
 cmp.setup {
   formatting = {
@@ -148,7 +131,7 @@ cmp.setup {
   },
   sources = {
     {name = "nvim_lsp"},
-    {name = "luasnip"}, --{name = "nvim_lua"},
+    {name = "luasnip"},
     {
       name = "buffer",
       option = {
@@ -157,15 +140,14 @@ cmp.setup {
         end
       }
     },
-    --{name = "look"},
-    {name = "path"}
+    {name = "look"},
+    {name = "path"},
     --{name = "cmp_tabnine"},
-    --{name = "calc"},
-    --{name = "spell"},
-    --{name = "emoji"}
+    {name = "calc"},
+    {name = "emoji"},
+    {name = "spell"}
   }
 }
-
 
 
 

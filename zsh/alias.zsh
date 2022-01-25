@@ -16,4 +16,6 @@ alias lgit='lazygit'
 alias l='ls -la'
 alias e='exit'
 
+# pacman mirrors generation
+alias mirror='sudo pacman-mirrors -i -c China -m rank'
 

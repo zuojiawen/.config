@@ -1,22 +1,8 @@
-require'marks'.setup {
-  default_mappings = true,
-  --builtin_marks = { ".", "<", ">", "^" },
-  cyclic = true,
-  force_write_shada = false,
-  refresh_interval = 250,
-  sign_priority = { lower=10, upper=15, builtin=8, bookmark=20 },
-  excluded_filetypes = {},
-  bookmark_0 = {
-    sign = "⚑",
-    virt_text = "hello world"
-  },
-  mappings = {}
-}
-
 require('lualine').setup {
   options = {
     icons_enabled = true,
     theme = 'papercolor_light',
+    --theme = 'sonokai',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
@@ -42,25 +28,19 @@ require('lualine').setup {
   extensions = {}
 }
 
+
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"html", "css", "vim", "lua", "javascript", "typescript", "python"},
+  ensure_installed = { "python", "lua", "vim" },
+  sync_install = false,
+  ignore_install = { "javascript" },
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = false
+    disable = { "c", "rust" },
+    additional_vim_regex_highlighting = true,
   },
-  incremental_selection = {
+  rainbow = {
     enable = true,
-    keymaps = {
-      init_selection = '<CR>',
-      node_incremental = '<CR>',
-      node_decremental = '<BS>',
-      scope_incremental = '<TAB>',
-    }
-  },
-  indent = {
-    enable = true
+    extended_mode = true, 
   }
 }
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
-vim.wo.foldlevel = 99
+

@@ -1,6 +1,5 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
--- Automatically install and set up packer.nvim on any machine you clone your configuration to. 
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -19,29 +18,26 @@ return require('packer').startup(function()
   use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
 
 
-   
 	use {
 	"hrsh7th/nvim-cmp",
 	requires = {
-	"hrsh7th/cmp-nvim-lsp", --neovim 内置 LSP 客户端的 nvim-cmp 源
-	--以下插件可选，可以根据个人喜好删减
-	"onsails/lspkind-nvim", --美化自动完成提示信息
-	"hrsh7th/cmp-buffer", --从buffer中智能提示
-	"hrsh7th/cmp-nvim-lua", --nvim-cmp source for neovim Lua API.
-	"octaltree/cmp-look", --用于完成英语单词
-	"hrsh7th/cmp-path", --自动提示硬盘上的文件
-	"hrsh7th/cmp-calc", --输入数学算式（如1+1=）自动计算
-	"f3fora/cmp-spell", --nvim-cmp 的拼写源基于 vim 的拼写建议
-	"hrsh7th/cmp-emoji", --输入: 可以显示表情
+	"hrsh7th/cmp-nvim-lsp",
+	"onsails/lspkind-nvim",
+	"hrsh7th/cmp-buffer",
+	"hrsh7th/cmp-nvim-lua",
+	"octaltree/cmp-look",
+	"hrsh7th/cmp-path",
+	"hrsh7th/cmp-calc",
+	"f3fora/cmp-spell",
+	"hrsh7th/cmp-emoji",
 	}
 	}
 
-	-- 代码段提示
 	use {
 	"L3MON4D3/LuaSnip",
 	requires = {
-	"saadparwaiz1/cmp_luasnip", -- Snippets source for nvim-cmp
-	"rafamadriz/friendly-snippets" --代码段合集
+	"saadparwaiz1/cmp_luasnip",
+	"rafamadriz/friendly-snippets"
 	}
 	}
 
@@ -64,20 +60,61 @@ return require('packer').startup(function()
 	  end
 	}
 
-	 use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-     }
+    use {
+       'nvim-lualine/lualine.nvim',
+       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
 
 
-     use {
-         'nvim-treesitter/nvim-treesitter',
-         run = ':TSUpdate'
-     }
+use "rebelot/kanagawa.nvim"
+use 'shaunsingh/nord.nvim'
+use 'Mofiqul/dracula.nvim'
+use "rafamadriz/neon"
+use 'marko-cerovac/material.nvim'
+use 'shaunsingh/moonlight.nvim'
+use 'folke/tokyonight.nvim'
+use 'EdenEast/nightfox.nvim'
+use "savq/melange"
+use 'rmehri01/onenord.nvim'
+
+use 'sainnhe/everforest'
+use 'sainnhe/sonokai'
+use "ellisonleao/gruvbox.nvim" 
+use 'luisiacc/gruvbox-baby'
+use 'sainnhe/gruvbox-material'
 
 
-
-
+-- Editing Support
+use {
+  'abecodes/tabout.nvim',
+  config = function()
+    require('tabout').setup {
+    tabkey = '<Tab>', -- key to trigger tabout, set to an empty string to disable
+    backwards_tabkey = '<S-Tab>', -- key to trigger backwards tabout, set to an empty string to disable
+    act_as_tab = true, -- shift content if tab out is not possible
+    act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
+    enable_backwards = true, -- well ...
+    completion = true, -- if the tabkey is used in a completion pum
+    tabouts = {
+      {open = "'", close = "'"},
+      {open = '"', close = '"'},
+      {open = '`', close = '`'},
+      {open = '(', close = ')'},
+      {open = '[', close = ']'},
+      {open = '{', close = '}'}
+    },
+    ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
+    exclude = {} -- tabout will ignore these filetypes
+}
+  end,
+	wants = {'nvim-treesitter'}, -- or require if not used so far
+	after = {'nvim-cmp'} -- if a completion plugin is using tabs load it before
+}
 
 
 
