@@ -68,7 +68,7 @@ inoremap jl <c-r>=JumpPair()<CR>
 " plugin mapping
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
-map <C-f> :Ranger<CR>
+map <C-f> :tabe<CR>:Ranger<CR>
 
 
 
