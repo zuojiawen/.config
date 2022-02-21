@@ -11,6 +11,11 @@ alias gc='git clone'
 alias ra='ranger'
 alias lgit='lazygit'
 
+# Proxy
+alias pmode='gsettings get org.gnome.system.proxy mode'
+alias pmanual='gsettings set org.gnome.system.proxy mode manual'
+alias pnone='gsettings set org.gnome.system.proxy mode none'
+
 
 # shell built-in command
 alias l='ls -la'

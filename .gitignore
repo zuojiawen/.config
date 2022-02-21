@@ -24,4 +24,4 @@ zsh/*.zwc
 
 !linux_plug
 
-!system
+!rofi
