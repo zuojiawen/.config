@@ -13,8 +13,9 @@ alias lgit='lazygit'
 
 # Proxy
 alias pmode='gsettings get org.gnome.system.proxy mode'
-alias pmanual='gsettings set org.gnome.system.proxy mode manual'
 alias pnone='gsettings set org.gnome.system.proxy mode none'
+alias pamanual='gsettings set org.gnome.system.proxy.http host 127.0.0.1 ; gsettings set org.gnome.system.proxy.http port 8889 ; gsettings set org.gnome.system.proxy.https host 127.0.0.1 ; gsettings set org.gnome.system.proxy.https port 8889 ; gsettings set org.gnome.system.proxy mode manual'
+alias pcmanual='gsettings set org.gnome.system.proxy.http host 127.0.0.1 ; gsettings set org.gnome.system.proxy.http port 7890 ; gsettings set org.gnome.system.proxy.https host 127.0.0.1 ; gsettings set org.gnome.system.proxy.https port 7890 ; gsettings set org.gnome.system.proxy mode manual'
 
 
 # shell built-in command
