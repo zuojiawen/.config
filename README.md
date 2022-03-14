@@ -8,7 +8,7 @@ This repo is my config file. You can clone it to your home directory, then you c
 rm ~/.zshrc
 ln -s ~/.config/zsh/.zshrc ~/.zshrc 
 ```
-2. You can to install the pluin [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [powerlecel10k](https://github.com/romkatv/powerlevel10k). 
+2. You can to install [oh-my-zsh](https://ohmyz.sh/#install)and the pluin [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [powerlecel10k](https://github.com/romkatv/powerlevel10k). 
 3. For plugin powerlevel10k, you can type command "p10k configure" to config Powerlevel10k theme. 
 
 ## nvim
@@ -17,8 +17,12 @@ ln -s ~/.config/zsh/.zshrc ~/.zshrc
 3. The coc plugin need dowmload via npm, you'd better swich the npm source to domestic source.
 
 ## ranger
-1. If you want to have icons in front of the filename, You need to install ranger plugin devicon2 in [ranger wiki page](https://github.com/ranger/ranger/wiki) or directly in [devicon2 page](https://github.com/cdump/ranger-devicons2)
-2. The devicon2 plugin need to install the Nerd Font. 
+1. Make directory to make trash is available.
+```
+mkdir -p ~/.local/share/Trash/files 
+```
+2. If you want to have icons in front of the filename, You need to install ranger plugin devicon2 in [ranger wiki page](https://github.com/ranger/ranger/wiki) or directly in [devicon2 page](https://github.com/cdump/ranger-devicons2)
+3. The devicon2 plugin need to install the Nerd Font. 
 
 ## tmux
 1. Because the tmux configure file must be in home directory, you need to link the .tmux.conf file in .config directory to the home directory via run the following command: 
