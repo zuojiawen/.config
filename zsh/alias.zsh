@@ -11,11 +11,15 @@ alias gc='git clone'
 alias ra='ranger'
 alias lgit='lazygit'
 
+# WIFI
+alias hotspot='nmcli device wifi & ; nmcli device wifi connect TP4415 password 88888888'
+alias campus='nmcli device wifi & ; nmcli device wifi connect csust-lt'
+
 # Proxy
 alias pmode='gsettings get org.gnome.system.proxy mode'
 alias pnone='gsettings set org.gnome.system.proxy mode none'
-alias pamanual='gsettings set org.gnome.system.proxy.http host 127.0.0.1 ; gsettings set org.gnome.system.proxy.http port 8889 ; gsettings set org.gnome.system.proxy.https host 127.0.0.1 ; gsettings set org.gnome.system.proxy.https port 8889 ; gsettings set org.gnome.system.proxy mode manual'
-alias pcmanual='gsettings set org.gnome.system.proxy.http host 127.0.0.1 ; gsettings set org.gnome.system.proxy.http port 7890 ; gsettings set org.gnome.system.proxy.https host 127.0.0.1 ; gsettings set org.gnome.system.proxy.https port 7890 ; gsettings set org.gnome.system.proxy mode manual'
+alias pacross='gsettings set org.gnome.system.proxy.http host 127.0.0.1 ; gsettings set org.gnome.system.proxy.http port 8889 ; gsettings set org.gnome.system.proxy.https host 127.0.0.1 ; gsettings set org.gnome.system.proxy.https port 8889 ; gsettings set org.gnome.system.proxy mode manual'
+alias pclash='gsettings set org.gnome.system.proxy.http host 127.0.0.1 ; gsettings set org.gnome.system.proxy.http port 7890 ; gsettings set org.gnome.system.proxy.https host 127.0.0.1 ; gsettings set org.gnome.system.proxy.https port 7890 ; gsettings set org.gnome.system.proxy mode manual'
 
 
 # shell built-in command

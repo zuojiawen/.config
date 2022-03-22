@@ -38,32 +38,10 @@ noremap <C-c> "+y
 noremap erc :e $MYVIMRC<CR>
 noremap src :w<CR>:source $MYVIMRC<CR>
 
-" Run a script 
-noremap <A-r> :w<CR>:! python3 % <CR>
-noremap <C-r> :call CompileRunGcc()<CR>
 
 " Jump Out Pair
 inoremap jl <c-r>=JumpPair()<CR>
 
-" Find files using Telescope command-line sugar.
-"nnoremap <leader>ff <cmd>Telescope find_files<cr>
-"nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-"nnoremap <leader>fb <cmd>Telescope buffers<cr>
-"nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-"nnoremap <leader>fl <cmd>Telescope git_files<cr>
-
-"nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
-"nnoremap <silent> <leader>dd :lua require('dap').continue()<CR>
-"nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
-"nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
-"nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
-"nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
-"nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
-"nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
-"nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
-"nnoremap <silent> <leader>dl :lua require'dap'.repl.run_last()<CR>`
-"nnoremap <silent> <leader>dn :lua require('dap-python').test_method()<CR>
-"vnoremap <silent> <leader>ds <ESC>:lua require('dap-python').debug_selection()<CR>
 
 " plugin mapping
 nnoremap <C-n> :NvimTreeToggle<CR>
@@ -90,3 +68,10 @@ autocmd Filetype markdown inoremap <buffer> ,2 ##<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap <buffer> ,3 ###<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap <buffer> ,4 ####<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap <buffer> ,l --------<Enter>
+
+
+
+
+" Run a script 
+noremap <A-r> :w<CR>:! python3 % <CR>
+noremap <C-r> :call CompileRunGcc()<CR>
