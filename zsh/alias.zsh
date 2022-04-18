@@ -4,7 +4,7 @@ alias av='source .venv/bin/activate'
 
 # git
 alias 'gitclone'='git clone https://github.com/zuojiawen/.config.git'
-alias gitstorepassword='git config credential.helper store'
+alias gitpassword='git config credential.helper store'
 alias gc='git clone'
 
 # some package 
@@ -24,7 +24,7 @@ alias pclash='gsettings set org.gnome.system.proxy.http host 127.0.0.1 ; gsettin
 
 # shell built-in command
 alias l='ls -la'
-alias e='exit'
+alias q='exit'
 
 # pacman mirrors generation
 alias mirror='sudo pacman-mirrors -i -c China -m rank'

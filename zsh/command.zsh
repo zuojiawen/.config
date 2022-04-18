@@ -1,5 +1,17 @@
 #!bin/bash
 
+
+setting(){
+	gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left  "['<Super>a']"
+	gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right  "['<Super>d']"
+	gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left  "['<Super>w']"
+	gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right  "['<Super>s']"
+	gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
+	gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>m']"
+	gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Super>r']"
+}
+
+
 proxy(){
 	echo -n "Plelase enter the port: "
 	read port
@@ -7,6 +19,7 @@ proxy(){
 	export https_proxy="https://127.0.0.1:$port"
     echo "Proxy on"
 }
+
 
 unproxy(){
 	unset http_proxy 
@@ -20,6 +33,8 @@ wslproxy(){
 	export ALL_PROXY="http://$host_ip:$port" 
 }
 
+
 unwslproxy(){
 	unset ALL_PROXY
 }
+
