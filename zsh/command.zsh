@@ -9,6 +9,7 @@ setting(){
 	gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
 	gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>m']"
 	gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Super>r']"
+    gsettings set org.gnome.desktop.interface text-scaling-factor 1.4
 }
 
 
