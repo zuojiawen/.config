@@ -209,6 +209,7 @@ return packer.startup(function(use)
   -- UI
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "sainnhe/everforest"
   -- use "martinsione/darkplus.nvim"
   -- use "navarasu/onedark.nvim"
   use({
