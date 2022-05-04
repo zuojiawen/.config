@@ -1,17 +1,17 @@
-vim.cmd [[
-try
-    colorscheme everforest
-    "colorscheme sonokai
-    "colorscheme duskfox
-catch /^Vim\%((\a\+)\)\=:E185/
-    colorscheme default
-    set background=dark
-endtry
-]]
+-- cursor color: #61AFEF
+local colorscheme = "catppuccin"
+-- local colorscheme = "darkplus"
+-- local colorscheme = "github_light"
+-- require "user.conf.github-nvim-theme"
 
-vim.cmd [[
-highlight LineNr ctermfg=gray
-highlight CursorLineNr ctermfg=yellow
-"highlight Comment ctermfg=gray
-highlight Visual ctermbg=241
-]]
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+  vim.notify("colorscheme " .. colorscheme .. " not found!")
+  return
+end
+
+if colorscheme == "onedark" then
+  require "user.themes.onedark"
+elseif colorscheme == "catppuccin" then
+  require "user.themes.catppuccin"
+end
