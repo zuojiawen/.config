@@ -6,9 +6,9 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", ";", "<Nop>", opts)
-vim.g.mapleader = ";"
-vim.g.maplocalleader = ";"
+keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Modes normal_mode = "n",
 --   insert_mode = "i",
@@ -17,6 +17,9 @@ vim.g.maplocalleader = ";"
 --   term_mode = "t", command_mode = "c",
 
 -- Normal --
+-- Map ; as :
+keymap("n", ";", ":", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
