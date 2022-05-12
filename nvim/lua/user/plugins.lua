@@ -84,10 +84,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons" -- icons
 
   -- Telescope
-  use {
-    "nvim-telescope/telescope.nvim",
-    tag = "nvim-0.6",
-  }
+  use "nvim-telescope/telescope.nvim"
   use {
     "nvim-telescope/telescope-fzf-native.nvim",
     run = "make",
@@ -116,15 +113,13 @@ return packer.startup(function(use)
   -- use "m-demare/hlargs.nvim"
   -- use "SmiteshP/nvim-gps" -- statusline shows class structure
   use "andymass/vim-matchup"
-  -- use {
-  --   "abecodes/tabout.nvim",
-  --   wants = { 'vim-treesitter' }, -- or require if not used so far
-  -- }
+
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   -- use "RishabhRD/popfix"
   -- use "RishabhRD/nvim-lsputils"
   use "kosayoda/nvim-lightbulb" -- code action
@@ -138,6 +133,7 @@ return packer.startup(function(use)
   -- Editor enhance
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "terrortylor/nvim-comment"
+  use 'numToStr/Comment.nvim'
   use "Shatur/neovim-session-manager"
   -- cmp plugins
   use {
@@ -198,10 +194,7 @@ return packer.startup(function(use)
   -- use { "jbyuki/one-small-step-for-vimkind", module = "osv" } -- debug any Lua code running in a Neovim instance
 
   -- Git
-  use {
-    "lewis6991/gitsigns.nvim",
-    tag = "v0.4",
-  }
+  use "lewis6991/gitsigns.nvim"
   use 'sindrets/diffview.nvim'
   -- use "tanvirtin/vgit.nvim"
   -- use "tpope/vim-fugitive"
@@ -216,17 +209,11 @@ return packer.startup(function(use)
     "catppuccin/nvim",
     as = "catppuccin"
   })
-  use {
-    "projekt0n/github-nvim-theme",
-    tag = "v0.0.4",
-  }
+  use "projekt0n/github-nvim-theme"
 
   -- use "folke/tokyonight.nvim"
   use "kyazdani42/nvim-tree.lua" -- file explore
-  use {
-    "akinsho/bufferline.nvim", -- tab
-    tag = "v1.2.0",
-  }
+  use "akinsho/bufferline.nvim" -- tab
   -- use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim" -- status line
   use "goolord/alpha-nvim" -- welcome page

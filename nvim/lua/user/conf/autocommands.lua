@@ -30,4 +30,9 @@ vim.cmd [[
     autocmd!
     autocmd BufRead * autocmd BufWinEnter * ++once normal! zx
   augroup end
+
+  augroup _last_position  " https://github.com/nvim-telescope/telescope.nvim/issues/559
+    autocmd!
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  augroup end
 ]]
