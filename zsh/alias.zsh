@@ -13,7 +13,7 @@ alias lgit='lazygit'
 
 # WIFI
 alias hotspot='nmcli device wifi > /dev/null; nmcli device wifi connect TP4415 password 88888888'
-alias campus='nmcli device wifi > /dev/null; nmcli device wifi connect csust-lt'
+#alias campus='nmcli device wifi > /dev/null; nmcli device wifi connect csust-lt'
 
 # Proxy
 alias pmode='gsettings get org.gnome.system.proxy mode'

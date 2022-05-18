@@ -9,7 +9,7 @@ setting(){
 	gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
 	gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>m']"
 	gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Super>r']"
-    gsettings set org.gnome.desktop.interface text-scaling-factor 1.4
+  gsettings set org.gnome.desktop.interface text-scaling-factor 1.4
 }
 
 
@@ -37,5 +37,10 @@ wslproxy(){
 
 unwslproxy(){
 	unset ALL_PROXY
+}
+
+campus(){
+  # ping baidu.com -c 1 || nmcli device wifi > /dev/null || nmcli device wifi connect csust-lt
+  python3 $HOME/.config/zsh/scripts/csust-network-login/log2network.py
 }
 
