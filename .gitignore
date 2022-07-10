@@ -12,6 +12,8 @@ nvim/plugged/
 nvim/plugin/
 nvim/.netrwhist
 
+!astronvim
+
 !ranger
 ranger/plugins/
 

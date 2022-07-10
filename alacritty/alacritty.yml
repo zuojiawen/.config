@@ -23,7 +23,7 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
 
-#window:
+window:
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -61,13 +61,13 @@
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: none
+  #decorations: full
 
   # Background opacity
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  #opacity: 1.0
+  opacity: 0.8
 
   # Startup Mode (changes require restart)
   #
@@ -99,10 +99,10 @@
   # and `light`. Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
 
-#scrolling:
+scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  #history: 10000
+  history: 50000
 
   # Scrolling distance multiplier.
   #multiplier: 3
@@ -120,7 +120,7 @@ font:
     family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
   bold:
@@ -131,7 +131,7 @@ font:
     family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
   italic:
@@ -139,24 +139,24 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: FiraCode Nerd Font
+    family: hack
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: Italic
 
   # Bold italic font face
-  #bold_italic:
+  bold_italic:
     # Font family
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: monospace
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold Italic
+    style: Bold Italic
 
   # Point size
-  size: 17.5
+  size: 11.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -178,22 +178,15 @@ font:
   # it is recommended to set `use_thin_strokes` to `false`.
   #use_thin_strokes: true
 
-  # Use built-in font for box drawing characters.
-  #
-  # If `true`, Alacritty will use a custom built-in font for box drawing
-  # characters (Unicode points 2500 - 259f).
-  #
-  #builtin_box_drawing: true
-
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night)
-#colors:
+# Colors (ArcoLinux)
+colors:
   # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+  primary:
+   background: '#222222'
+   foreground: '#F9F9F9'
 
     # Bright and dim foreground colors
     #
@@ -280,26 +273,26 @@ font:
   #  background: CellForeground
 
   # Normal colors
-  #normal:
-  #  black:   '#1d1f21'
-  #  red:     '#cc6666'
-  #  green:   '#b5bd68'
-  #  yellow:  '#f0c674'
-  #  blue:    '#81a2be'
-  #  magenta: '#b294bb'
-  #  cyan:    '#8abeb7'
-  #  white:   '#c5c8c6'
+  normal:
+    black:   '#3f3f3f'
+    red:     '#cc0000'
+    green:   '#4e9a06'
+    yellow:  '#c4a000'
+    blue:    '#94bff3'
+    magenta: '#85678f'
+    cyan:    '#06989a'
+    white:   '#dcdccc'
 
   # Bright colors
-  #bright:
-  #  black:   '#666666'
-  #  red:     '#d54e53'
-  #  green:   '#b9ca4a'
-  #  yellow:  '#e7c547'
-  #  blue:    '#7aa6da'
-  #  magenta: '#c397d8'
-  #  cyan:    '#70c0b1'
-  #  white:   '#eaeaea'
+  bright:
+    black:   '#545454'
+    red:     '#fc5454'
+    green:   '#8ae234'
+    yellow:  '#fce94f'
+    blue:    '#94bff3'
+    magenta: '#b294bb'
+    cyan:    '#93e0e3'
+    white:   '#ffffff'
 
   # Dim colors
   #

@@ -7,9 +7,10 @@ setting(){
 	gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left  "['<Super>w']"
 	gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right  "['<Super>s']"
 	gsettings set org.gnome.desktop.wm.keybindings close "['<Super>q']"
-	gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>m']"
-	gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Super>r']"
+	gsettings set org.gnome.desktop.wm.keybindings toggle-maximized "['<Super>m']"
   gsettings set org.gnome.desktop.interface text-scaling-factor 1.4
+  gsettings set org.gnome.desktop.interface gtk-theme Juno
+  gsettings set org.gnome.desktop.wm.preferences theme Juno
 }
 
 

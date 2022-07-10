@@ -8,7 +8,11 @@ This repo is my config file. You can clone it to your home directory, then you c
 rm ~/.zshrc
 ln -s ~/.config/zsh/.zshrc ~/.zshrc 
 ```
-2. You can to install [oh-my-zsh](https://ohmyz.sh/#install)and the pluin [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [powerlecel10k](https://github.com/romkatv/powerlevel10k). 
+2. You can to install [oh-my-zsh](https://ohmyz.sh/#install)and the pluin 
+[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+[powerlecel10k](https://github.com/romkatv/powerlevel10k)
+- [history-substring-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history-substring-search)
+- [z](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z)
 3. For plugin powerlevel10k, you can type command "p10k configure" to config Powerlevel10k theme. 
 
 ## nvim
