@@ -7,11 +7,6 @@
 !/README.md
 !/.gitignore
 
-!nvim
-nvim/plugged/
-nvim/plugin/
-nvim/.netrwhist
-
 !astronvim
 
 !ranger

@@ -1,4 +1,4 @@
-This repo is my config file. You can clone it to your home directory, then you can refer to the following USAGE to know how to usage it.  
+This repo is my config file. 
 
 # USAGE
 
@@ -14,7 +14,6 @@ The following are pluins i use.
 - [powerlecel10k](https://github.com/romkatv/powerlevel10k)
 - [history-substring-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history-substring-search)
 - [z](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z)
-3. For plugin powerlevel10k, you can type command "p10k configure" to config Powerlevel10k theme. 
 
 ## nvim
 Install [astronvim](https://astronvim.github.io)
